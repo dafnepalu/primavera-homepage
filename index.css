@@ -1,0 +1,71 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    width: 1400px;
+    text-align: center;
+}
+
+header {
+    background-color: #f5f5f5;
+}
+
+header #menu ul li {
+    display: inline-block;
+    list-style-type: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #a4a3a3;
+}
+
+header #menu ul li+li {
+    margin-left: 40px;
+}
+
+header #menu ul li:hover {
+    color: #0075be;
+}
+
+#logotipoIcones {
+    /* Parece que não está realmente ocupando toda a página. */
+    /* Corrigir também o problema da cor de fundo que não está aparecendo. */
+    height: 80px;
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+#logotipoIcones .align-left {
+    float: left;
+    width: 50%;
+}
+
+#logotipoIcones .align-right {
+    float: right;
+    width: 50%;
+}
+
+#logotipoIcones .align-right i+i {
+    margin-left: 20px;
+}
+
+section h1 {
+    font-size: 250%;
+    color: #3c368c;
+    text-align: center;
+}
+
+footer {
+    background-color: #ebebeb;
+}
+
+footer header {
+    /* O elemento 'header' já põe o texto a negrito */
+    color: #252525;
+}
+
+footer a {
+    color: #7d7d7d;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
