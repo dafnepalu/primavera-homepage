@@ -139,21 +139,47 @@ hr {
 .coluna {
     flex: 33.33%;
     padding: 30px;
+    position: relative;
 }
 
-.coluna img{
+.coluna img {
     border-radius: 50%;
 }
 
-.coluna img:hover{
+.coluna img:hover {
     animation-name: arredondadoParaQuadrado;
-    animation-duration: 4s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
-@keyframes arredondadoParaQuadrado{
-    from {border-radius: 50%;}
-    to {border-radius: 0%;}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    transition: .7s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.coluna:hover .overlay {
+    /* Encontrar uma maneira de referenciar .coluna img:hover */
+    opacity: 1;
+}
+
+@keyframes arredondadoParaQuadrado {
+    from {
+        border-radius: 50%;
+    }
+
+    to {
+        border-radius: 0%;
+    }
 }
 
 footer {
