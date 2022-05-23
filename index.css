@@ -167,6 +167,15 @@ hr {
     text-align: center;
 }
 
+.overlay h1 {
+    color: white;
+    font-size: 125%;
+}
+
+.overlay h2 {
+    font-size: 1em;
+}
+
 .coluna:hover .overlay {
     /* Encontrar uma maneira de referenciar .coluna img:hover */
     opacity: 1;
@@ -182,20 +191,70 @@ hr {
     }
 }
 
+#slider {
+    background-image: url("/imagens/slider.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* Consertar o tamanho da imagem. */
+    height: 700px;
+    width: 1600px;
+}
+
+.sliderTexto {
+    /* Corrigir a posição. */
+    top: 50%;
+    position: relative;
+
+}
+
+.sliderTexto h1 {
+    font-size: 42px;
+    color: #f27d29;
+}
+
+.sliderTexto h2 {
+    font-size: 35px;
+    color: #153c85;
+}
+
+.sliderTexto p {
+    font-size: 26px;
+    color: #153c85;
+}
+
 footer {
     background-color: #ebebeb;
+    margin-top: 50px;
 }
 
-footer header {
-    /* O elemento 'header' já põe o texto a negrito */
+#footerHeader {
     color: #252525;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Este último não parece estar funcionando. */
+    text-align: left;
 }
 
-footer a {
+#footerLink {
     color: #7d7d7d;
     text-decoration: none;
 }
 
-footer a:hover {
+#footerLink:hover {
     text-decoration: underline;
+}
+
+.coluna li {
+    list-style-type: none;
+    text-align: left;
+}
+
+.seta {
+    position: relative;
+}
+
+.seta img {
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
 }
