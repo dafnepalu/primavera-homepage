@@ -258,3 +258,102 @@ footer {
     right: 50px;
     bottom: 10px;
 }
+
+#telaLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 100vw */
+    height: 100%;
+    /* 100vh */
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+
+#telaLogin section {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    text-align: center;
+    background-color: white;
+    border: 10px solid white;
+}
+
+#telaLogin img {
+    max-width: 100%;
+    max-height: calc(90vh - 20px);
+    vertical-align: top;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#telaLogin span {
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    display: inline-block;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid #999;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    -webkit-user-select: none;
+    user-select: none;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #000;
+}
+
+#telaLogin span:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+#telaLogin span:active {
+    box-shadow: none;
+    top: -22px;
+    right: -28px;
+}
+
+#telaLogin h1 {
+    font-size: 125%;
+    color: black;
+    text-align: left;
+}
+
+#formularioLogin #botaoSubmit {
+    background-color: rgb(13, 110, 253);
+    color: white;
+    border-radius: 20%;
+    border-style: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 8px;
+    text-decoration: none;
+}
+
+#iconeLogin{
+    cursor: pointer;
+}
+
+small {
+    /* A fonte não está tão pequena assim... */
+    margin-bottom: 20px;
+}
+
+.erro {
+    display: none;
+}
