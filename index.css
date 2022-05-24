@@ -40,6 +40,12 @@ header #logotipoIcones .icones {
     width: 50%;
 }
 
+#mensagemBoasVindas{
+    float:right;
+    width: 50%;
+    visibility: hidden;
+}
+
 header #logotipoIcones .icones i+i {
     margin-left: 20px;
 }

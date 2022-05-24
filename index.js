@@ -13,6 +13,7 @@ document.querySelector("#telaLogin span").addEventListener("click", function () 
 // Lidar com os erros do formulário de login:
 let erros = document.querySelector("#erros");
 let erroEmail = document.querySelector("#erroEmail");
+let erroSenha = document.querySelector("#erroSenha");
 let erroUtilizador = document.querySelector("#erroUtilizador");
 
 let campoEmail = document.querySelector("#email");
@@ -54,6 +55,39 @@ function submeterFormularioLogin(evento) {
             erroEmail.style.display = "block";
         } else {
             erroEmail.style.display = "none";
+
+            // Permite ir buscar o utilizador na base de dados e continuar a validação.
+            fetch(`http://localhost:3000/utilizadores?email=${emailValor}`)
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        console.log(response.status);
+                        throw Error(response.statusText);
+                    }
+                })
+                .then(utilizador => {
+                    if (utilizador.length > 0) {
+                        if (utilizador[0].senha === senhaValor) {
+                            console.log("Login OK");
+                            document.querySelector("#telaLogin").style.visibility = "hidden";
+                            document.getElementById("iconeLogin").classList.replace("fa-regular", "fa-solid");
+                            document.getElementById("iconeLogin").classList.replace("fa-user", "fa-arrow-right-from-bracket");
+                            document.querySelector("#mensagemBoasVindas").textContent=`Bem-vindo(a), ${utilizador[0].nome}`;
+                            document.querySelector("#mensagemBoasVindas").style.visibility ="visible";
+                        } else {
+                            erroSenha.textContent = "A senha que introduziu está incorreta.";
+                            erroSenha.style.display = "block";
+                        }
+                    } else {
+                        erros.innerHTML = `<p>O e-mail que inseriu não foi encontrado.</p>`;
+                        erroSenha.textContent = "";
+                    }
+                })
+                .catch(erro => {
+                    alert("Ocorreu um erro. Por favor, volte a tentar mais tarde. Caso o erro persista, contacte-nos através do e-mail erro@primaverabss.com");
+                    console.log(erro);
+                });
         }
     }
     console.log("Rodou");
