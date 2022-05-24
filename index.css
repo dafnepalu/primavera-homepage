@@ -40,6 +40,10 @@ header #logotipoIcones .icones {
     width: 50%;
 }
 
+#iconeLogout:hover{
+    cursor:pointer;
+}
+
 #mensagemBoasVindas{
     float:right;
     width: 50%;

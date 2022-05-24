@@ -3,7 +3,19 @@
 let iconeLogin = document.querySelector("#iconeLogin");
 
 iconeLogin.addEventListener("click", function () {
-    document.querySelector("#telaLogin").style.visibility = "visible";
+    if (sessionStorage.getItem("id") === null) {
+        // Permitir o login:
+        document.querySelector("#telaLogin").style.visibility = "visible";
+    } else {
+        // Fazer o logout:
+        console.log("Logging out...");
+        window.sessionStorage.removeItem("id");
+        iconeLogin.classList.replace("fa-solid","fa-regular");
+        iconeLogin.classList.replace("fa-arrow-right-from-bracket","fa-user");
+        document.querySelector("#mensagemBoasVindas").textContent = "";
+        document.querySelector("#mensagemBoasVindas").style.visibility = "hidden";
+        console.log("Logged out successfully.")
+    }
 });
 
 document.querySelector("#telaLogin span").addEventListener("click", function () {
@@ -73,8 +85,12 @@ function submeterFormularioLogin(evento) {
                             document.querySelector("#telaLogin").style.visibility = "hidden";
                             document.getElementById("iconeLogin").classList.replace("fa-regular", "fa-solid");
                             document.getElementById("iconeLogin").classList.replace("fa-user", "fa-arrow-right-from-bracket");
-                            document.querySelector("#mensagemBoasVindas").textContent=`Bem-vindo(a), ${utilizador[0].nome}`;
-                            document.querySelector("#mensagemBoasVindas").style.visibility ="visible";
+                            // Acho que posso excluir a linha abaixo:
+                            document.getElementById("iconeLogin").id = "iconeLogout";
+                            document.querySelector("#mensagemBoasVindas").textContent = `Bem-vindo(a), ${utilizador[0].nome}`;
+                            document.querySelector("#mensagemBoasVindas").style.visibility = "visible";
+                            let utilizadorId = utilizador[0].id;
+                            sessionStorage.setItem("id", utilizadorId);
                         } else {
                             erroSenha.textContent = "A senha que introduziu está incorreta.";
                             erroSenha.style.display = "block";
