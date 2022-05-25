@@ -108,3 +108,9 @@ function submeterFormularioLogin(evento) {
     }
     console.log("Rodou");
 }
+
+// O código abaixo faz com que a seção Contacto permaneça fixa ao fazer scroll:
+window.addEventListener("scroll", function(evento){
+    let contacto = document.getElementById("contacto");
+    contacto.classList.toggle("scrolling", this.window.scrollY>0);
+})

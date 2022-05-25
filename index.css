@@ -40,18 +40,48 @@ header #logotipoIcones .icones {
     width: 50%;
 }
 
-#iconeLogout:hover{
-    cursor:pointer;
+#iconeLogout:hover {
+    cursor: pointer;
 }
 
-#mensagemBoasVindas{
-    float:right;
+#mensagemBoasVindas {
+    float: right;
     width: 50%;
     visibility: hidden;
 }
 
 header #logotipoIcones .icones i+i {
     margin-left: 20px;
+}
+
+#contacto {
+    padding: 10px 10px 10px 10px;;
+    height: 30px;
+    width: 30px;
+    /* float:right interfere com o hover; outros "right" não surtem efeito... */
+    text-align: center;
+    overflow: hidden;
+    background-color: #252525;
+    color: #0acb84;
+    transition:0.2s;
+}
+
+#contacto:hover{
+    width: 150px;
+}
+
+#contacto:hover p{
+    visibility: visible;
+}
+
+#contacto p{
+    display:inline;
+    visibility: hidden;
+}
+
+#contacto.scrolling{
+    position:fixed;
+    right:0;
 }
 
 #banner {
@@ -355,7 +385,7 @@ footer {
     text-decoration: none;
 }
 
-#iconeLogin{
+#iconeLogin {
     cursor: pointer;
 }
 
