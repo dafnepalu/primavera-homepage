@@ -10,8 +10,8 @@ iconeLogin.addEventListener("click", function () {
         // Fazer o logout:
         console.log("Logging out...");
         window.sessionStorage.removeItem("id");
-        iconeLogin.classList.replace("fa-solid","fa-regular");
-        iconeLogin.classList.replace("fa-arrow-right-from-bracket","fa-user");
+        iconeLogin.classList.replace("fa-solid", "fa-regular");
+        iconeLogin.classList.replace("fa-arrow-right-from-bracket", "fa-user");
         document.querySelector("#mensagemBoasVindas").textContent = "";
         document.querySelector("#mensagemBoasVindas").style.visibility = "hidden";
         console.log("Logged out successfully.")
@@ -110,7 +110,24 @@ function submeterFormularioLogin(evento) {
 }
 
 // O código abaixo faz com que a seção Contacto permaneça fixa ao fazer scroll:
-window.addEventListener("scroll", function(evento){
+window.addEventListener("scroll", function (evento) {
     let contacto = document.getElementById("contacto");
-    contacto.classList.toggle("scrolling", this.window.scrollY>0);
+    contacto.classList.toggle("scrolling", this.window.scrollY > 0);
 })
+
+// Permite lidar com a mensagem dos Cookies:
+let conteudoGeral = document.getElementById("body");
+let cookieBox = document.querySelector(".cookiesWrapper");
+let clickedYes = "No";
+let acceptBtn = cookieBox.querySelector("button");
+acceptBtn.onclick = () => {
+    cookieBox.classList.add("hide");
+    conteudoGeral.style.opacity = 1;
+    conteudoGeral.style.overflow = "visible";
+    clickedYes = "Yes";
+}
+
+if (clickedYes === "No") {
+    conteudoGeral.style.opacity = 0.5;
+    conteudoGeral.style.overflow = "hidden";
+}
