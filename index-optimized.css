@@ -103,6 +103,29 @@ nav li {
     right: 40px;
 }
 
+
+
+.contact-container {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-container:hover #telephone-number {
+    display: inline;
+}
+
+#telephone-number {
+    display: none;
+}
+
+.contact-container img{
+    margin-right: 10px;
+}
+
 .mission h1,
 .team h1,
 .educational-offer h1 {
@@ -130,7 +153,7 @@ nav li {
 }
 
 p.subtitle {
-    color: blue;
+    color: red;
 }
 
 .team-content {
@@ -196,13 +219,13 @@ p.subtitle {
 }
 
 .mission,
-.team,
-.educational-offer {
+.team {
     padding: 1em;
 }
 
 .educational-offer {
     margin-bottom: 50px;
+    padding: 0;
 }
 
 .educational-offer-background {
@@ -222,15 +245,21 @@ footer {
     background-color: #ebebeb;
 }
 
-.footer-menu{
+.footer-menu {
     display: flex;
-    padding:20px;
+    padding: 20px;
 }
 
-.footer-menu-column{
-    flex:1 0 18%;
+.footer-menu-column {
+    flex: 1 0 18%;
 }
 
 .footer-menu-column ul {
     padding: 0;
+}
+
+.footer-arrow {
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
