@@ -30,13 +30,16 @@ header {
 }
 
 .logo-and-icons {
+    height: 80px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .icons {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 i {
@@ -47,6 +50,17 @@ i+i {
     margin-left: 20px;
 }
 
+.welcome-message-and-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.welcome-message {
+    margin-right: 20px;
+}
+
+
 nav {
     width: 100%;
     margin-left: auto;
@@ -55,7 +69,6 @@ nav {
 }
 
 nav ul {
-    /* text-align: center; */
     display: flex;
     justify-content: space-evenly;
     padding: 0px;
@@ -67,6 +80,15 @@ nav li {
     width: 150px;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav li a {
+    color: #a4a3a3;
+}
+
+nav li a:hover {
+    color: #0075be;
 }
 
 .hero-background {
@@ -91,19 +113,40 @@ nav li {
     text-decoration: none;
 }
 
-.hero-content .button:hover {
-    background-color: #c8c8c8;
+.hero-content .button a {
+    color: #f5f5f5;
+}
+
+.hero-content .button:hover a {
     color: #252525;
 }
 
-.hero-content img {
-    /* Não está bem como no protótipo... */
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
+.hero-content .button:hover {
+    background-color: #c8c8c8;
 }
 
+.hero-content h1 {
+    font-size: 48px;
+    color: #F5E9FF;
+}
 
+.hero-content p.subtitle {
+    font-size: 30px;
+    color: #ccc;
+    font-style: normal;
+}
+
+.hero-content p {
+    font-size: 20px;
+    color: #ccc;
+    font-style: italic;
+}
+
+#computer {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+}
 
 .contact-container {
     position: fixed;
@@ -112,23 +155,28 @@ nav li {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background: #252525;
+    padding: 20px;
 }
 
 .contact-container:hover #telephone-number {
     display: inline;
+    color: #0acb84;
 }
 
 #telephone-number {
     display: none;
 }
 
-.contact-container img{
+.contact-container:hover img {
     margin-right: 10px;
 }
 
 .mission h1,
 .team h1,
 .educational-offer h1 {
+    font-size: 250%;
+    color: #3c368c;
     text-align: center;
 }
 
@@ -146,14 +194,35 @@ nav li {
     padding: 1em;
 }
 
+.mission-content-text p.subtitle {
+    color: #252525;
+    font-weight: bold;
+}
+
+.mission-content-text p {
+    color: #7d7d7d;
+}
+
+.mission-content-text a {
+    color: #0075be;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mission-content-text a:hover {
+    text-decoration: underline;
+}
+
 .mission-content-image img {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-p.subtitle {
-    color: red;
+hr {
+    height: 2px;
+    background-color: #7d7d7d;
 }
 
 .team-content {
@@ -218,6 +287,15 @@ p.subtitle {
     text-align: center;
 }
 
+.team-member-caption h1 {
+    font-size: 125%;
+    color: #f1f1f1;
+}
+
+.team-member-caption p {
+    font-size: 1em;
+}
+
 .mission,
 .team {
     padding: 1em;
@@ -241,6 +319,21 @@ p.subtitle {
     text-align: center;
 }
 
+.educational-offer-content h1 {
+    font-size: 42px;
+    color: #f27d29;
+}
+
+.educational-offer-content p.subtitle {
+    font-size: 35px;
+}
+
+.educational-offer-content p {
+    font-size: 26px;
+    color: #153c85;
+}
+
+
 footer {
     background-color: #ebebeb;
 }
@@ -254,12 +347,152 @@ footer {
     flex: 1 0 18%;
 }
 
+.footer-menu-column h1 {
+    color: #252525;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
 .footer-menu-column ul {
     padding: 0;
+}
+
+.footer-menu-column ul li a {
+    color: #7d7d7d;
+    text-decoration: none;
+}
+
+.footer-menu-column ul li a:hover {
+    color: #7d7d7d;
+    text-decoration: underline;
 }
 
 .footer-arrow {
     text-align: right;
     padding-right: 20px;
     padding-bottom: 20px;
+}
+
+/* W3 classes */
+.w3-container,
+.w3-panel {
+    padding: 0.01em 16px
+}
+
+.w3-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.w3-modal {
+    z-index: 3;
+    display: none;
+    padding-top: 100px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4)
+}
+
+.w3-modal-content {
+    margin: auto;
+    background-color: #fff;
+    position: relative;
+    padding: 0;
+    outline: 0;
+    width: 400px;
+    height: 300px;
+}
+
+.w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.w3-display-topright {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.cookie-modal {
+    background-color: #f5f5f5;
+}
+
+.cookie-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+    background-color: #f5f5f5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(170, 170, 170);
+}
+
+.cookie-message a {
+    color: #0075be;
+    text-decoration: none;
+}
+
+.cookie-message a:hover {
+    text-decoration: underline;
+}
+
+#cookie-button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    background: #f16248;
+    cursor: pointer;
+    margin-left: 50px;
+    display: inline;
+}
+
+#cookie-button:hover {
+    background: #f5f5f5;
+    color: #f16248;
+    border: black solid 2px;
+}
+
+#login-button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #0D6EFD;
+    cursor: pointer;
+}
+
+.whole-page {
+    position: relative;
+}
+
+#email,
+#password {
+    display: inline-block;
+    width: 70%;
 }

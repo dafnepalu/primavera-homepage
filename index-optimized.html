@@ -13,116 +13,149 @@
 </head>
 
 <body>
-    <div class="extended-wrapper contact-container">
-        <img src="imagens/telefone.png" alt="Contacte-nos por telefone">
-        <p id="telephone-number">919 204 462</p>
-    </div>
-    <div class="hero-wrapper">
-        <div class="wrapper">
-            <header>
-                <div class="logo-and-icons">
-                    <a href="https://pt.primaverabss.com/pt/"><img src="imagens/logotipo.png"
-                            alt="Logotipo da Primavera BSS"></a>
-                    <div class="icons">
-                        <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                        <i class="fa-regular fa-user" id="login-icon"></i>
-                    </div>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#">Contabilistas</a></li>
-                        <li><a href="#">Setor privado</a></li>
-                        <li><a href="#">Setor público</a></li>
-                        <li><a href="#">Formação</a></li>
-                        <li><a href="#">Parceiros</a></li>
-                        <li><a href="#">Carreiras</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="hero-background">
-                <div class="hero-content">
-                    <h1>Tecnologia para vencer</h1>
-                    <p class="subtitle">Conheça os casos de sucesso PRIMAVERA</p>
-                    <p>Na linha da frente na digitalização de empresas</p>
-                    <div class="button">
-                        <a href="https://pt.primaverabss.com/pt/pagina/tecnologia-para-vencer">SAIBA MAIS></a>
-                    </div>
-                    <img src="imagens/computador.png" alt="Imagem de um computador">
-                </div>
-            </div>
+    <div class="whole-page">
+        <div class="extended-wrapper contact-container">
+            <img src="imagens/telefone.png" alt="Contacte-nos por telefone">
+            <p id="telephone-number">919 204 462</p>
         </div>
-    </div>
-    <div class="main-content-wrapper">
-        <div class="wrapper">
-            <div class="mission">
-                <h1>Missão</h1>
-                <div class="mission-content">
-                    <div class="mission-content-image">
-                        <img src="imagens/missao.jpg" alt="Imagem de uma atleta saltando sobre um obstáculo">
-                    </div>
-                    <div class="mission-content-text">
-                        <p class="subtitle">Simplificar a vida nas organizações, aumentando a criação de valor, é a
-                            nossa
-                            grande missão.</p>
-                        <p>Desafiar o desconhecido. Explorar possibilidades. Transpor barreiras. Inovar. São estas as
-                            motivações que desde 1993 nos conduzem na busca de soluções de gestão inovadoras que
-                            simplificam
-                            a vida nas organizações.</p>
-                        <p>A paixão pela inovação na gestão empresarial está no ADN da PRIMAVERA. Um entusiasmo
-                            contagiante
-                            que colocamos ao serviço das organizações, disponibilizando-lhes um leque crescente de
-                            soluções
-                            de gestão que agilizam as operações e aumentam a rentabilidade do negócio.</p>
-                        <p>Acreditamos na força das ideias. Auxiliamos a sua concretização. Impulsionamos os resultados.
-                            Defendemos que com a tecnologia certa, crescer é o caminho. Do mais pequeno micronegócio a
-                            uma
-                            grande multinacional, disponibilizamos soluções ajustadas, ágeis e funcionais que dão mais
-                            força
-                            ao negócio.</p>
-                        <a href="#">» Conheça a nossa brochura institucional</a>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="team">
-                <h1>Equipa</h1>
-                <div class="team-content">
-                    <div class="team-member">
-                        <img src="imagens/foto1.png">
-                        <div class="team-member-caption">
-                            <h1>Daniela Alves</h1>
-                            <p class="subtitle">Web Developer</p>
+        <div class="hero-wrapper">
+            <div class="wrapper">
+                <header>
+                    <div class="logo-and-icons">
+                        <a href="https://pt.primaverabss.com/pt/"><img src="imagens/logotipo.png"
+                                alt="Logotipo da Primavera BSS"></a>
+                        <div class="welcome-message-and-icons">
+                            <div class="welcome-message">
+                                <p></p>
+                            </div>
+                            <div class="icons">
+                                <i class="fa-solid fa-magnifying-glass" id="search-icon" title="Pesquisa"></i>
+                                <i class="fa-regular fa-user" id="login-icon" title="Login"></i>
+                                <div id="login-screen" class="w3-modal">
+                                    <div class="w3-modal-content">
+                                        <div class="w3-container">
+                                            <span id="login-span" class="w3-button w3-display-topright">&times;</span>
+                                            <h1>Controlo de acessos</h1>
+                                            <div class="form">
+                                                <form id="login-form" novalidate>
+                                                    <div class = "errors"></div>
+                                                    <small id="email-error" class="error"></small>
+                                                    <small id="password-error" class="error"></small>
+                                                    <small id="user-error" class="error"></small>
+                                                    <p><label for="email">E-mail:</label> <input type="email"
+                                                            id="email"></p>
+                                                    <p><label for="password">Senha:</label> <input type="text"
+                                                            id="password"></p>
+                                                    <div class="login-button">
+                                                        <p><input type="submit" id="login-button" value="Validar"></p>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="team-member">
-                        <img src="imagens/foto2.png">
-                        <div class="team-member-caption">
-                            <h1>Manuela Ribeiro</h1>
-                            <p class="subtitle">Front-end developer</p>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Contabilistas</a></li>
+                            <li><a href="#">Setor privado</a></li>
+                            <li><a href="#">Setor público</a></li>
+                            <li><a href="#">Formação</a></li>
+                            <li><a href="#">Parceiros</a></li>
+                            <li><a href="#">Carreiras</a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <div class="hero-background">
+                    <img src="imagens/computador.png" alt="Imagem de um computador" id="computer">
+                    <div class="hero-content">
+                        <h1>Tecnologia para vencer</h1>
+                        <p class="subtitle">Conheça os casos de sucesso PRIMAVERA</p>
+                        <p>Na linha da frente na digitalização de empresas</p>
+                        <div class="button">
+                            <a href="https://pt.primaverabss.com/pt/pagina/tecnologia-para-vencer">SAIBA MAIS ></a>
                         </div>
-                    </div>
-                    <div class="team-member">
-                        <img src="imagens/foto3.png">
-                        <div class="team-member-caption">
-                            <h1>Bruna Silva</h1>
-                            <p class="subtitle">Designer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="educational-offer">
-                <h1>Oferta formativa</h1>
-                <div class="educational-offer-background">
-                    <div class="educational-offer-content">
-                        <h1>PRIMAVERA Academy</h1>
-                        <p class="subtitle">Juntos seremos mais fortes!</p>
-                        <p>Aposte em novas competências</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="main-content-wrapper">
+            <div class="wrapper">
+                <div class="mission">
+                    <h1>Missão</h1>
+                    <div class="mission-content">
+                        <div class="mission-content-image">
+                            <img src="imagens/missao.jpg" alt="Imagem de uma atleta saltando sobre um obstáculo">
+                        </div>
+                        <div class="mission-content-text">
+                            <p class="subtitle">Simplificar a vida nas organizações, aumentando a criação de valor, é a
+                                nossa
+                                grande missão.</p>
+                            <p>Desafiar o desconhecido. Explorar possibilidades. Transpor barreiras. Inovar. São estas
+                                as
+                                motivações que desde 1993 nos conduzem na busca de soluções de gestão inovadoras que
+                                simplificam
+                                a vida nas organizações.</p>
+                            <p>A paixão pela inovação na gestão empresarial está no ADN da PRIMAVERA. Um entusiasmo
+                                contagiante
+                                que colocamos ao serviço das organizações, disponibilizando-lhes um leque crescente de
+                                soluções
+                                de gestão que agilizam as operações e aumentam a rentabilidade do negócio.</p>
+                            <p>Acreditamos na força das ideias. Auxiliamos a sua concretização. Impulsionamos os
+                                resultados.
+                                Defendemos que com a tecnologia certa, crescer é o caminho. Do mais pequeno micronegócio
+                                a
+                                uma
+                                grande multinacional, disponibilizamos soluções ajustadas, ágeis e funcionais que dão
+                                mais
+                                força
+                                ao negócio.</p>
+                            <a href="#">» Conheça a nossa brochura institucional</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="team">
+                    <h1>Equipa</h1>
+                    <div class="team-content">
+                        <div class="team-member">
+                            <img src="imagens/foto1.png">
+                            <div class="team-member-caption">
+                                <h1>Daniela Alves</h1>
+                                <p class="subtitle">Web Developer</p>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <img src="imagens/foto2.png">
+                            <div class="team-member-caption">
+                                <h1>Manuela Ribeiro</h1>
+                                <p class="subtitle">Front-end developer</p>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <img src="imagens/foto3.png">
+                            <div class="team-member-caption">
+                                <h1>Bruna Silva</h1>
+                                <p class="subtitle">Designer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="educational-offer">
+                    <h1>Oferta formativa</h1>
+                    <div class="educational-offer-background">
+                        <div class="educational-offer-content">
+                            <h1>PRIMAVERA Academy</h1>
+                            <p class="subtitle">Juntos seremos mais fortes!</p>
+                            <p>Aposte em novas competências</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer-wrapper">
         <div class="wrapper">
@@ -184,6 +217,14 @@
                             alt="Imagem de uma seta para cima"></a>
                 </div>
             </footer>
+        </div>
+    </div>
+    </div>
+    <div class="cookie-modal">
+        <div class="cookie-message">
+            <p>Este website utiliza cookies para melhorar a sua experiência de navegação. Para continuar a navegar, deve
+                ler e aceitar os <a href="#">Termos e Condições</a>.</p>
+            <div id="cookie-button" class="button">Li e aceito ></div>
         </div>
     </div>
     <script src="index-optimized.js"></script>
