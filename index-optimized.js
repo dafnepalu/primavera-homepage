@@ -34,6 +34,7 @@ loginIcon.addEventListener("click", function () {
         window.sessionStorage.removeItem("id");
         loginIcon.classList.replace("fa-solid", "fa-regular");
         loginIcon.classList.replace("fa-arrow-right-from-bracket", "fa-user");
+        loginIcon.title="Login";
         document.querySelector(".welcome-message").textContent = "";
         document.querySelector(".welcome-message").style.visibility = "none";
         document.querySelector("#email").value = "";
@@ -110,8 +111,7 @@ function submitLoginForm(event) {
                             document.querySelector("#login-screen").style.display = "none";
                             document.getElementById("login-icon").classList.replace("fa-regular", "fa-solid");
                             document.getElementById("login-icon").classList.replace("fa-user", "fa-arrow-right-from-bracket");
-                            // Acho que posso excluir a linha abaixo:
-                            // document.getElementById("login-icon").id = "logout-icon";
+                            document.getElementById("login-icon").title = "Logout";
                             document.querySelector(".welcome-message").textContent = `Bem-vindo(a), ${utilizador[0].nome}`;
                             document.querySelector(".welcome-message").style.visibility = "visible";
                             let utilizadorId = utilizador[0].id;

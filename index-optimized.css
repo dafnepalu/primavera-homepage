@@ -26,11 +26,13 @@ ul {
 
 header {
     background: #f5f5f5;
-    padding: 10px;
+    padding-bottom:15px;
 }
 
 .logo-and-icons {
     height: 80px;
+    margin-left:15px;
+    margin-right:15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,9 +65,11 @@ i+i {
 
 nav {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left:15px;
+    margin-right:15px;
+    padding: 0px;
 }
 
 nav ul {
@@ -73,6 +77,8 @@ nav ul {
     justify-content: space-evenly;
     padding: 0px;
     overflow: hidden;
+    margin-top:0;
+    margin-bottom:0;
 }
 
 nav li {
@@ -145,18 +151,30 @@ nav li a:hover {
 #computer {
     position: absolute;
     bottom: -40px;
-    right: -40px;
+    right: 40px;
+}
+
+.extended-wrapper{
+    position: absolute;
 }
 
 .contact-container {
     position: fixed;
-    top: 50px;
+    top: 100px;
     right: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    z-index: 100;
+}
+
+.contact-information{
     background: #252525;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container:hover .contact-information{
+    padding:10px;
 }
 
 .contact-container:hover #telephone-number {
@@ -197,6 +215,7 @@ nav li a:hover {
 .mission-content-text p.subtitle {
     color: #252525;
     font-weight: bold;
+    margin-top: 0;
 }
 
 .mission-content-text p {
@@ -303,7 +322,10 @@ hr {
 
 .educational-offer {
     margin-bottom: 50px;
-    padding: 0;
+    padding-top: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 }
 
 .educational-offer-background {
@@ -336,6 +358,7 @@ hr {
 
 footer {
     background-color: #ebebeb;
+    padding-left:15px;
 }
 
 .footer-menu {
@@ -374,18 +397,11 @@ footer {
     padding-bottom: 20px;
 }
 
-/* W3 classes */
-.w3-container,
-.w3-panel {
+.modal-container {
     padding: 0.01em 16px
 }
 
-.w3-panel {
-    margin-top: 16px;
-    margin-bottom: 16px
-}
-
-.w3-modal {
+.modal {
     z-index: 3;
     display: none;
     padding-top: 100px;
@@ -399,7 +415,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.4)
 }
 
-.w3-modal-content {
+.modal-content {
     margin: auto;
     background-color: #fff;
     position: relative;
@@ -409,7 +425,7 @@ footer {
     height: 300px;
 }
 
-.w3-button {
+.close-button {
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -423,7 +439,7 @@ footer {
     white-space: nowrap
 }
 
-.w3-display-topright {
+.display-topright {
     position: absolute;
     right: 0;
     top: 0
