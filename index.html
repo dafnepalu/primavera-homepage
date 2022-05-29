@@ -33,6 +33,7 @@
                             <div class="icons">
                                 <i class="fa-solid fa-magnifying-glass" id="search-icon" title="Pesquisa"></i>
                                 <i class="fa-regular fa-user" id="login-icon" title="Login"></i>
+                                <i class="fa-solid fa-bars" id="hamburguer-icon" title="Menu" onclick="document.getElementById('nav').style.display='flex';document.getElementById('nav').style.justifyContent='center';document.getElementById('menu').style.display='block'"></i>
                                 <div id="login-screen" class="modal">
                                     <div class="modal-content">
                                         <div class="modal-container">
@@ -59,8 +60,8 @@
                             </div>
                         </div>
                     </div>
-                    <nav>
-                        <ul>
+                    <nav id="nav">
+                        <ul id="menu">
                             <li><a href="#">Contabilistas</a></li>
                             <li><a href="#">Setor privado</a></li>
                             <li><a href="#">Setor público</a></li>

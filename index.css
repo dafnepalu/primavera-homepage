@@ -26,13 +26,13 @@ ul {
 
 header {
     background: #f5f5f5;
-    padding-bottom:15px;
+    padding-bottom: 15px;
 }
 
 .logo-and-icons {
     height: 80px;
-    margin-left:15px;
-    margin-right:15px;
+    margin-left: 15px;
+    margin-right: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,6 +52,10 @@ i+i {
     margin-left: 20px;
 }
 
+#hamburguer-icon {
+    display: none;
+}
+
 .welcome-message-and-icons {
     display: flex;
     justify-content: space-evenly;
@@ -65,11 +69,19 @@ i+i {
 
 nav {
     width: 100%;
-    /* margin-left: auto;
-    margin-right: auto; */
-    margin-left:15px;
-    margin-right:15px;
-    padding: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+@media screen and (max-width:800px) {
+    nav {
+        display: none;
+    }
+
+    #hamburguer-icon {
+        display: inline;
+    }
 }
 
 nav ul {
@@ -77,8 +89,8 @@ nav ul {
     justify-content: space-evenly;
     padding: 0px;
     overflow: hidden;
-    margin-top:0;
-    margin-bottom:0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 nav li {
@@ -154,7 +166,72 @@ nav li a:hover {
     right: 40px;
 }
 
-.extended-wrapper{
+@media screen and (max-width:1100px) {
+    #computer {
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .hero-content {
+        display: block;
+        text-align: center;
+    }
+
+    .hero-background {
+        height: 320px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p.subtitle {
+        font-size: 24px;
+    }
+
+    .mission-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .team-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member+.team-member {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-menu-column {
+        width: 100%;
+    }
+
+    .footer-menu>div {
+        flex: 50%;
+        margin-bottom: 10px;
+    }
+
+    .contact-container:hover .contact-information img {
+        padding: 10px;
+        margin-right: 0;
+    }
+
+    .footer-arrow {
+        display: none;
+    }
+
+}
+
+.extended-wrapper {
     position: absolute;
 }
 
@@ -165,7 +242,7 @@ nav li a:hover {
     z-index: 100;
 }
 
-.contact-information{
+.contact-information {
     background: #252525;
     padding: 20px;
     display: flex;
@@ -173,13 +250,15 @@ nav li a:hover {
     align-items: center;
 }
 
-.contact-container:hover .contact-information{
-    padding:10px;
+.contact-container:hover .contact-information {
+    padding: 10px;
 }
 
-.contact-container:hover #telephone-number {
-    display: inline;
-    color: #0acb84;
+@media screen and (min-width:801px) {
+    .contact-container:hover #telephone-number {
+        display: inline;
+        color: #0acb84;
+    }
 }
 
 #telephone-number {
@@ -284,6 +363,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
+    max-width: 100%;
 }
 
 .team-member+.team-member {
@@ -329,9 +409,10 @@ hr {
 }
 
 .educational-offer-background {
-    background: url("imagens/slider.jpg");
+    background-image: url("imagens/slider.jpg");
     background-size: cover;
     height: 511px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -355,10 +436,9 @@ hr {
     color: #153c85;
 }
 
-
 footer {
     background-color: #ebebeb;
-    padding-left:15px;
+    padding-left: 15px;
 }
 
 .footer-menu {
@@ -367,7 +447,7 @@ footer {
 }
 
 .footer-menu-column {
-    flex: 1 0 18%;
+    flex: 1 0 20%;
 }
 
 .footer-menu-column h1 {
@@ -445,6 +525,15 @@ footer {
     top: 0
 }
 
+@media screen and (max-width:1300px) {
+    .cookie-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 .cookie-modal {
     background-color: #f5f5f5;
 }
@@ -488,7 +577,7 @@ footer {
 #cookie-button:hover {
     background: #f5f5f5;
     color: #f16248;
-    border: black solid 2px;
+    border: #f16248 solid 2px;
 }
 
 #login-button {
